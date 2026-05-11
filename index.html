@@ -472,12 +472,12 @@
             <line x1="24" y1="22" x2="24" y2="28"/>
           </svg>
         </div>
-        <strong data-lang="tr">14 Gün Pil Ömrü</strong>
-        <strong data-lang="en">14-Day Battery Life</strong>
-        <strong data-lang="fr">Autonomie de 14 jours</strong>
-        <span data-lang="tr">Derin uyku modu ile düşük tüketim</span>
-        <span data-lang="en">Deep-sleep low-power operation</span>
-        <span data-lang="fr">Mode veille profonde à faible consommation</span>
+        <strong data-lang="tr">Şarj Edilebilir Pil</strong>
+        <strong data-lang="en">Rechargeable Battery</strong>
+        <strong data-lang="fr">Batterie rechargeable</strong>
+        <span data-lang="tr">14 güne kadar şarjsız çalışma süresi</span>
+        <span data-lang="en">Up to 14 days of operation per charge</span>
+        <span data-lang="fr">Jusqu'à 14 jours d'autonomie par charge</span>
       </div>
       <div class="item">
         <div class="icon">
@@ -505,36 +505,36 @@
     <div data-lang="tr">
       <p>Ürünü teslim alır almaz aşağıdaki bileşenlerin eksiksiz biçimde mevcut olduğunu doğrulayınız:</p>
       <ul>
-        <li>1 × ESP32 sensör ünitesi (IP65 muhafaza içinde, monte edilmiş halde)</li>
-        <li>1 × Kapasitif toprak nem sensörü (3 m kablo)</li>
-        <li>1 × BME280 sıcaklık ve bağıl nem sensörü</li>
-        <li>1 × 12 V DC su pompası ve 2 m hortum</li>
-        <li>1 × 12 V / 2 A güç adaptörü (CE sertifikalı)</li>
-        <li>1 × 18650 Li-ion pil (ünite içerisine takılı)</li>
+        <li>1 × ESP32 sensör ünitesi (IP65 muhafaza içinde, tümleşik 12 V güç kablosu ile)</li>
+        <li>1 × Kapasitif toprak nem sensörü (üniteye bağlı hortumla birlikte)</li>
+        <li>1 × DHT22 sıcaklık ve bağıl nem sensörü</li>
+        <li>1 × 12 V DC su pompası</li>
+        <li>2 × Hortum (su kaynağı girişi ve bitki çıkışı için)</li>
+        <li>1 × Şarj edilebilir 18650 Li-ion pil (ünite içerisine takılı)</li>
         <li>1 × Hızlı başlangıç kartı (QR kodlu)</li>
       </ul>
     </div>
     <div data-lang="en">
       <p>Upon delivery, verify that all of the following components are present:</p>
       <ul>
-        <li>1 × ESP32 sensor unit (pre-assembled in IP65 enclosure)</li>
-        <li>1 × Capacitive soil-moisture sensor (3 m cable)</li>
-        <li>1 × BME280 temperature and humidity sensor</li>
-        <li>1 × 12 V DC water pump with 2 m hose</li>
-        <li>1 × 12 V / 2 A power adapter (CE certified)</li>
-        <li>1 × 18650 Li-ion battery (pre-installed in unit)</li>
+        <li>1 × ESP32 sensor unit (in IP65 enclosure, with integrated 12 V power cable)</li>
+        <li>1 × Capacitive soil-moisture sensor (with attached hose)</li>
+        <li>1 × DHT22 temperature and humidity sensor</li>
+        <li>1 × 12 V DC water pump</li>
+        <li>2 × Hoses (one for water source intake, one for plant outlet)</li>
+        <li>1 × Rechargeable 18650 Li-ion battery (pre-installed in unit)</li>
         <li>1 × Quick-start card (with QR code)</li>
       </ul>
     </div>
     <div data-lang="fr">
       <p>À la livraison, vérifiez la présence de l'ensemble des composants suivants :</p>
       <ul>
-        <li>1 × Unité de capteurs ESP32 (préassemblée dans un boîtier IP65)</li>
-        <li>1 × Capteur d'humidité du sol capacitif (câble de 3 m)</li>
-        <li>1 × Capteur de température et d'humidité BME280</li>
-        <li>1 × Pompe à eau 12 V CC avec tuyau de 2 m</li>
-        <li>1 × Adaptateur secteur 12 V / 2 A (certifié CE)</li>
-        <li>1 × Batterie Li-ion 18650 (préinstallée dans l'unité)</li>
+        <li>1 × Unité de capteurs ESP32 (boîtier IP65, avec câble d'alimentation 12 V intégré)</li>
+        <li>1 × Capteur d'humidité du sol capacitif (avec tuyau attaché)</li>
+        <li>1 × Capteur de température et d'humidité DHT22</li>
+        <li>1 × Pompe à eau 12 V CC</li>
+        <li>2 × Tuyaux (un pour l'entrée d'eau, un pour la sortie vers la plante)</li>
+        <li>1 × Batterie Li-ion 18650 rechargeable (préinstallée dans l'unité)</li>
         <li>1 × Carte de démarrage rapide (avec code QR)</li>
       </ul>
     </div>
@@ -560,13 +560,14 @@
 
       <h3>3.2 Su Pompasının Bağlanması</h3>
       <ol class="step-list">
-        <li>Pompayı su deposuna ya da tanka yerleştirin.</li>
-        <li>Hortumu pompa çıkışına takın ve sulanacak alana yönlendirin.</li>
-        <li>12 V adaptörü önce pompaya, ardından şebekeye bağlayın.</li>
+        <li>Pompayı sulanacak alanın yakınına konumlandırın.</li>
+        <li>Giriş hortumunun bir ucunu pompanın <strong>emiş ağzına</strong>, diğer ucunu su kaynağına (depo veya tank) yerleştirin.</li>
+        <li>Çıkış hortumunun bir ucunu pompanın <strong>çıkış ağzına</strong>, diğer ucunu bitkiye yönlendirin.</li>
+        <li>Ünitenin tümleşik 12 V güç kablosunu şebekeye bağlayın.</li>
       </ol>
 
       <h3>3.3 Cihazın İlk Açılışı</h3>
-      <p>Ünitenin yan yüzeyindeki güç anahtarını "ON" konumuna alın. Gösterge LED'i <strong>mavi yanıp sönüyorsa</strong> cihaz yapılandırma moduna girmiş demektir.</p>
+      <p>Ünitenin güç anahtarını "ON" konumuna alın. Cihaz 10–15 saniye içinde kurulum moduna geçer ve <code>AgriChat_Setup_XXXX</code> kablosuz ağı yayına başlar (bkz. Bölüm 4).</p>
 
       <div class="callout warn">
         <strong>Önemli Uyarı</strong>
@@ -584,13 +585,14 @@
 
       <h3>3.2 Water Pump Connection</h3>
       <ol class="step-list">
-        <li>Place the pump in the water reservoir or tank.</li>
-        <li>Connect the hose to the pump outlet and route it to the irrigation area.</li>
-        <li>Plug the 12 V adapter into the pump first, then into the mains.</li>
+        <li>Position the pump near the irrigation area.</li>
+        <li>Connect one end of the intake hose to the pump's <strong>intake port</strong> and place the other end into the water source (reservoir or tank).</li>
+        <li>Connect one end of the outlet hose to the pump's <strong>outlet port</strong> and route the other end to the plant.</li>
+        <li>Plug the unit's integrated 12 V power cable into the mains.</li>
       </ol>
 
       <h3>3.3 Initial Power-On</h3>
-      <p>Switch the power button on the side of the unit to the "ON" position. A <strong>blinking blue LED</strong> indicates that the device has entered configuration mode.</p>
+      <p>Switch the power button on the unit to the "ON" position. The device enters setup mode within 10–15 seconds and broadcasts the <code>AgriChat_Setup_XXXX</code> wireless network (see Section 4).</p>
 
       <div class="callout warn">
         <strong>Important Notice</strong>
@@ -608,13 +610,14 @@
 
       <h3>3.2 Raccordement de la pompe à eau</h3>
       <ol class="step-list">
-        <li>Placez la pompe dans le réservoir ou la cuve d'eau.</li>
-        <li>Connectez le tuyau à la sortie de la pompe et dirigez-le vers la zone à irriguer.</li>
-        <li>Branchez l'adaptateur 12 V d'abord à la pompe, puis au secteur.</li>
+        <li>Placez la pompe à proximité de la zone à irriguer.</li>
+        <li>Raccordez une extrémité du tuyau d'<strong>aspiration</strong> à l'entrée de la pompe et placez l'autre dans la source d'eau (réservoir ou cuve).</li>
+        <li>Raccordez une extrémité du tuyau de <strong>sortie</strong> à la sortie de la pompe et dirigez l'autre vers la plante.</li>
+        <li>Branchez le câble d'alimentation 12 V intégré de l'unité au secteur.</li>
       </ol>
 
       <h3>3.3 Première mise sous tension</h3>
-      <p>Placez l'interrupteur situé sur le côté de l'unité en position "ON". Un <strong>voyant bleu clignotant</strong> indique que l'appareil est passé en mode configuration.</p>
+      <p>Placez l'interrupteur de l'unité en position « ON ». L'appareil passe en mode configuration en 10–15 secondes et diffuse le réseau sans fil <code>AgriChat_Setup_XXXX</code> (voir Section 4).</p>
 
       <div class="callout warn">
         <strong>Avertissement important</strong>
@@ -650,7 +653,7 @@
       </ol>
 
       <h3>4.3 Bağlantı Doğrulaması</h3>
-      <p>Gösterge LED'i <strong>kesintisiz yeşil</strong> ışık vermeye başladığında cihaz başarılı şekilde ağa katılmıştır. Web panelinde cihazın "online" durumunda görünmesi kurulumun tamamlandığını teyit eder.</p>
+      <p>Cihaz, ağa başarılı şekilde katıldığında <code>AgriChat_Setup_XXXX</code> kablosuz ağı kaybolur ve ünite buluta bağlanır. Web panelinde cihazın "çevrimiçi" durumunda görünmesi kurulumun tamamlandığını teyit eder.</p>
     </div>
 
     <div data-lang="en">
@@ -670,7 +673,7 @@
       </ol>
 
       <h3>4.3 Connection Verification</h3>
-      <p>When the status LED turns to <strong>solid green</strong>, the device has successfully joined the network. Confirmation is complete when the device appears as "online" on the web dashboard.</p>
+      <p>Once the device has successfully joined the network, the <code>AgriChat_Setup_XXXX</code> wireless network disappears and the unit connects to the cloud. Confirmation is complete when the device appears as "online" on the web dashboard.</p>
     </div>
 
     <div data-lang="fr">
@@ -690,7 +693,7 @@
       </ol>
 
       <h3>4.3 Vérification de la connexion</h3>
-      <p>Lorsque le voyant d'état passe au <strong>vert fixe</strong>, l'appareil est correctement connecté au réseau. La configuration est confirmée lorsque l'appareil apparaît comme « en ligne » sur le tableau de bord.</p>
+      <p>Lorsque l'appareil a rejoint le réseau avec succès, le réseau sans fil <code>AgriChat_Setup_XXXX</code> disparaît et l'unité se connecte au cloud. La configuration est confirmée lorsque l'appareil apparaît comme « en ligne » sur le tableau de bord.</p>
     </div>
   </section>
 
@@ -702,7 +705,7 @@
 
     <div data-lang="tr">
       <h3>5.1 Panele Erişim</h3>
-      <p>Tarayıcınızdan <code>https://agrichat.app</code> adresine giderek hesap bilgilerinizle oturum açın. Chrome, Edge, Safari ve Firefox'un güncel sürümleri desteklenmektedir.</p>
+      <p>Tarayıcınızdan <a href="https://agrichat-group5-de6ad9e046a9.herokuapp.com" target="_blank" rel="noopener"><code>agrichat-group5-de6ad9e046a9.herokuapp.com</code></a> adresine giderek hesap bilgilerinizle oturum açın. Chrome, Edge, Safari ve Firefox'un güncel sürümleri desteklenmektedir.</p>
 
       <h3>5.2 Sensör Değerlerinin Yorumlanması</h3>
       <table>
@@ -721,7 +724,7 @@
 
     <div data-lang="en">
       <h3>5.1 Accessing the Dashboard</h3>
-      <p>Navigate to <code>https://agrichat.app</code> in your browser and sign in with your account credentials. Current versions of Chrome, Edge, Safari, and Firefox are supported.</p>
+      <p>Navigate to <a href="https://agrichat-group5-de6ad9e046a9.herokuapp.com" target="_blank" rel="noopener"><code>agrichat-group5-de6ad9e046a9.herokuapp.com</code></a> in your browser and sign in with your account credentials. Current versions of Chrome, Edge, Safari, and Firefox are supported.</p>
 
       <h3>5.2 Interpreting Sensor Readings</h3>
       <table>
@@ -740,7 +743,7 @@
 
     <div data-lang="fr">
       <h3>5.1 Accès au tableau de bord</h3>
-      <p>Rendez-vous à l'adresse <code>https://agrichat.app</code> dans votre navigateur et connectez-vous avec vos identifiants. Les versions récentes de Chrome, Edge, Safari et Firefox sont prises en charge.</p>
+      <p>Rendez-vous à l'adresse <a href="https://agrichat-group5-de6ad9e046a9.herokuapp.com" target="_blank" rel="noopener"><code>agrichat-group5-de6ad9e046a9.herokuapp.com</code></a> dans votre navigateur et connectez-vous avec vos identifiants. Les versions récentes de Chrome, Edge, Safari et Firefox sont prises en charge.</p>
 
       <h3>5.2 Interprétation des relevés de capteurs</h3>
       <table>
@@ -957,10 +960,10 @@
         <tbody>
           <tr><td>Cihaz "çevrimdışı" olarak görünüyor</td><td>WiFi sinyalini ve pil seviyesini kontrol edin; üniteyi erişim noktasına yaklaştırın.</td></tr>
           <tr><td>Toprak nemi sürekli %0 veya %100</td><td>Sensör kablosunu inceleyin, sensörü uygun derinliğe yerleştirin ve kalibrasyon yapın.</td></tr>
-          <tr><td>Pompa çalışmıyor</td><td>12 V güç adaptörünü ve pompa bağlantılarını kontrol edin; su deposunda yeterli su olduğundan emin olun.</td></tr>
+          <tr><td>Pompa çalışmıyor</td><td>12 V güç kablosunu ve pompa bağlantılarını kontrol edin; su kaynağında yeterli su olduğundan ve emiş hortumunun suya temas ettiğinden emin olun.</td></tr>
           <tr><td>Asistan yanıt vermiyor</td><td>İnternet bağlantınızı doğrulayın ve sayfayı yenileyin.</td></tr>
           <tr><td>Pil hızla tükeniyor</td><td>Otomatik sulama sıklığını azaltın ve uyku süresini panel üzerinden artırın.</td></tr>
-          <tr><td>LED kırmızı yanıyor</td><td>Donanım hatası tespit edildi; bkz. Bölüm 10 — Fabrika Ayarları.</td></tr>
+          <tr><td>Cihaz hiç açılmıyor</td><td>Pilin şarjlı olduğunu doğrulayın; gerekirse 12 V güç kablosunu prize takarak şarj edin.</td></tr>
         </tbody>
       </table>
     </div>
@@ -971,10 +974,10 @@
         <tbody>
           <tr><td>Device shown as "offline"</td><td>Check WiFi signal and battery level; move the unit closer to the access point.</td></tr>
           <tr><td>Soil moisture stuck at 0% or 100%</td><td>Inspect the sensor cable, place the sensor at the correct depth, and recalibrate.</td></tr>
-          <tr><td>Pump does not start</td><td>Check the 12 V adapter and pump connections; ensure the reservoir has sufficient water.</td></tr>
+          <tr><td>Pump does not start</td><td>Check the 12 V power cable and pump connections; ensure the reservoir has sufficient water and the intake hose is submerged.</td></tr>
           <tr><td>Assistant does not respond</td><td>Verify your internet connection and refresh the page.</td></tr>
           <tr><td>Battery drains rapidly</td><td>Reduce automation frequency and increase sleep duration from the dashboard.</td></tr>
-          <tr><td>LED is red</td><td>Hardware fault detected; refer to Section 10 — Factory Reset.</td></tr>
+          <tr><td>Device will not power on</td><td>Verify the battery is charged; if needed, charge by plugging the 12 V power cable into the mains.</td></tr>
         </tbody>
       </table>
     </div>
@@ -985,10 +988,10 @@
         <tbody>
           <tr><td>L'appareil apparaît « hors ligne »</td><td>Vérifiez le signal WiFi et le niveau de batterie ; rapprochez l'unité du point d'accès.</td></tr>
           <tr><td>Humidité du sol bloquée à 0 % ou 100 %</td><td>Inspectez le câble du capteur, placez-le à la bonne profondeur et recalibrez-le.</td></tr>
-          <tr><td>La pompe ne démarre pas</td><td>Vérifiez l'adaptateur 12 V et les raccordements ; assurez-vous que le réservoir contient de l'eau.</td></tr>
+          <tr><td>La pompe ne démarre pas</td><td>Vérifiez le câble d'alimentation 12 V et les raccordements ; assurez-vous que le réservoir contient de l'eau et que le tuyau d'aspiration y est immergé.</td></tr>
           <tr><td>L'assistant ne répond pas</td><td>Vérifiez votre connexion Internet et actualisez la page.</td></tr>
           <tr><td>La batterie se vide rapidement</td><td>Réduisez la fréquence d'automatisation et augmentez la durée de veille via le tableau de bord.</td></tr>
-          <tr><td>Voyant LED rouge</td><td>Défaut matériel détecté ; consultez la Section 10 — Réinitialisation d'usine.</td></tr>
+          <tr><td>L'appareil ne s'allume pas</td><td>Vérifiez que la batterie est chargée ; au besoin, rechargez en branchant le câble 12 V au secteur.</td></tr>
         </tbody>
       </table>
     </div>
@@ -1002,40 +1005,40 @@
 
     <div data-lang="tr">
       <ol class="step-list">
-        <li>Sensör ünitesinin üzerindeki <strong>RESET</strong> tuşunu 10 saniye süreyle basılı tutun.</li>
-        <li>LED hızla yanıp sönmeye başladığında tuşu bırakın.</li>
-        <li>Cihaz yeniden başlar ve yapılandırma moduna döner.</li>
-        <li>Bölüm 4'te tanımlanan adımları izleyerek WiFi bağlantısını yeniden yapılandırın.</li>
+        <li>Web panelinde <em>Ayarlar</em> menüsüne gidin.</li>
+        <li><strong>Fabrika Ayarlarına Dön</strong> seçeneğine tıklayın.</li>
+        <li>Onay penceresinde işlemi teyit edin.</li>
+        <li>Cihaz yeniden başlar ve yapılandırma moduna döner; Bölüm 4'teki adımları izleyerek WiFi bağlantısını yeniden kurun.</li>
       </ol>
       <div class="callout danger">
         <strong>Uyarı</strong>
-        Fabrika ayarlarına dönüş tüm yapılandırılmış kuralları ve yerel olarak saklanan verileri silmektedir.
+        Fabrika ayarlarına dönüş tüm yapılandırılmış kuralları ve yerel olarak saklanan verileri kalıcı olarak siler.
       </div>
     </div>
 
     <div data-lang="en">
       <ol class="step-list">
-        <li>Press and hold the <strong>RESET</strong> button on the sensor unit for 10 seconds.</li>
-        <li>Release the button when the LED begins to blink rapidly.</li>
-        <li>The device restarts and returns to configuration mode.</li>
-        <li>Reconfigure the WiFi connection by following the steps in Section 4.</li>
+        <li>Open the <em>Settings</em> menu in the web dashboard.</li>
+        <li>Click <strong>Restore Factory Defaults</strong>.</li>
+        <li>Confirm the action in the dialog window.</li>
+        <li>The device restarts and returns to configuration mode; reconfigure WiFi by following the steps in Section 4.</li>
       </ol>
       <div class="callout danger">
         <strong>Warning</strong>
-        A factory reset erases all configured rules and locally stored data.
+        A factory reset permanently erases all configured rules and locally stored data.
       </div>
     </div>
 
     <div data-lang="fr">
       <ol class="step-list">
-        <li>Maintenez enfoncé le bouton <strong>RESET</strong> de l'unité pendant 10 secondes.</li>
-        <li>Relâchez le bouton lorsque le voyant LED se met à clignoter rapidement.</li>
-        <li>L'appareil redémarre et revient en mode configuration.</li>
-        <li>Reconfigurez la connexion WiFi en suivant les étapes de la Section 4.</li>
+        <li>Ouvrez le menu <em>Paramètres</em> dans le tableau de bord web.</li>
+        <li>Cliquez sur <strong>Restaurer les paramètres d'usine</strong>.</li>
+        <li>Confirmez l'action dans la fenêtre de dialogue.</li>
+        <li>L'appareil redémarre et revient en mode configuration ; reconfigurez le WiFi en suivant les étapes de la Section 4.</li>
       </ol>
       <div class="callout danger">
         <strong>Avertissement</strong>
-        Une réinitialisation d'usine efface toutes les règles configurées et les données stockées localement.
+        Une réinitialisation d'usine efface définitivement toutes les règles configurées et les données stockées localement.
       </div>
     </div>
   </section>
@@ -1050,7 +1053,7 @@
       <ul>
         <li>Sensör ünitesini tamamen suya batırmayınız.</li>
         <li>Islak ortamlarda muhafaza kapağının kapalı ve contanın sağlam olduğundan emin olunuz.</li>
-        <li>Yalnızca ürünle birlikte sağlanan 12 V güç adaptörünü kullanınız.</li>
+        <li>Yalnızca ürünle birlikte sağlanan tümleşik 12 V güç kablosunu kullanınız.</li>
         <li>Ünite muhafazasını açmayınız; aksi takdirde garanti geçersiz hale gelir.</li>
         <li>Cihazı doğrudan fıskiye veya basınçlı su akışı altında bırakmayınız.</li>
         <li>Cihazı 0 °C altındaki ya da 50 °C üzerindeki ortam sıcaklıklarında çalıştırmayınız.</li>
@@ -1061,7 +1064,7 @@
       <ul>
         <li>Do not fully submerge the sensor unit in water.</li>
         <li>In wet environments, ensure the enclosure cover is closed and the gasket is intact.</li>
-        <li>Use only the 12 V power adapter supplied with the product.</li>
+        <li>Use only the integrated 12 V power cable supplied with the product.</li>
         <li>Do not open the unit enclosure; doing so voids the warranty.</li>
         <li>Do not expose the device to direct sprinkler or pressurized water flow.</li>
         <li>Do not operate the device at ambient temperatures below 0 °C or above 50 °C.</li>
@@ -1072,7 +1075,7 @@
       <ul>
         <li>N'immergez pas complètement l'unité de capteurs dans l'eau.</li>
         <li>En environnement humide, vérifiez que le couvercle du boîtier est fermé et que le joint est intact.</li>
-        <li>Utilisez uniquement l'adaptateur 12 V fourni avec le produit.</li>
+        <li>Utilisez uniquement le câble d'alimentation 12 V intégré fourni avec le produit.</li>
         <li>N'ouvrez pas le boîtier de l'unité ; cela annulerait la garantie.</li>
         <li>N'exposez pas l'appareil à un arroseur direct ou à un jet d'eau sous pression.</li>
         <li>N'utilisez pas l'appareil à des températures inférieures à 0 °C ou supérieures à 50 °C.</li>
