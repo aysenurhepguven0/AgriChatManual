@@ -505,36 +505,36 @@
     <div data-lang="tr">
       <p>Ürünü teslim alır almaz aşağıdaki bileşenlerin eksiksiz biçimde mevcut olduğunu doğrulayınız:</p>
       <ul>
-        <li>1 × ESP32 sensör ünitesi (IP65 muhafaza içinde, tümleşik 12 V güç kablosu ile)</li>
-        <li>1 × Kapasitif toprak nem sensörü (üniteye bağlı hortumla birlikte)</li>
+        <li>1 × ESP32 sensör ünitesi (IP65 muhafaza, güç anahtarlı; pille çalışır)</li>
+        <li>1 × Şarj edilebilir 18650 Li-ion pil (üniteye takılı, yalnızca ESP32 ve sensörleri besler)</li>
+        <li>1 × Kapasitif toprak nem sensörü (üniteye bağlı kabloyla birlikte)</li>
         <li>1 × DHT22 sıcaklık ve bağıl nem sensörü</li>
-        <li>1 × 12 V DC su pompası</li>
+        <li>1 × 12 V DC su pompası (kendi 12 V güç kablosu ile, ayrı şebeke beslemesi)</li>
         <li>2 × Hortum (su kaynağı girişi ve bitki çıkışı için)</li>
-        <li>1 × Şarj edilebilir 18650 Li-ion pil (ünite içerisine takılı)</li>
         <li>1 × Hızlı başlangıç kartı (QR kodlu)</li>
       </ul>
     </div>
     <div data-lang="en">
       <p>Upon delivery, verify that all of the following components are present:</p>
       <ul>
-        <li>1 × ESP32 sensor unit (in IP65 enclosure, with integrated 12 V power cable)</li>
-        <li>1 × Capacitive soil-moisture sensor (with attached hose)</li>
+        <li>1 × ESP32 sensor unit (IP65 enclosure, with power switch; battery-operated)</li>
+        <li>1 × Rechargeable 18650 Li-ion battery (pre-installed in unit, powers only the ESP32 and sensors)</li>
+        <li>1 × Capacitive soil-moisture sensor (with attached cable)</li>
         <li>1 × DHT22 temperature and humidity sensor</li>
-        <li>1 × 12 V DC water pump</li>
+        <li>1 × 12 V DC water pump (with its own 12 V power cable, separate mains supply)</li>
         <li>2 × Hoses (one for water source intake, one for plant outlet)</li>
-        <li>1 × Rechargeable 18650 Li-ion battery (pre-installed in unit)</li>
         <li>1 × Quick-start card (with QR code)</li>
       </ul>
     </div>
     <div data-lang="fr">
       <p>À la livraison, vérifiez la présence de l'ensemble des composants suivants :</p>
       <ul>
-        <li>1 × Unité de capteurs ESP32 (boîtier IP65, avec câble d'alimentation 12 V intégré)</li>
-        <li>1 × Capteur d'humidité du sol capacitif (avec tuyau attaché)</li>
+        <li>1 × Unité de capteurs ESP32 (boîtier IP65, avec interrupteur ; fonctionne sur batterie)</li>
+        <li>1 × Batterie Li-ion 18650 rechargeable (préinstallée, alimente uniquement l'ESP32 et les capteurs)</li>
+        <li>1 × Capteur d'humidité du sol capacitif (avec câble attaché)</li>
         <li>1 × Capteur de température et d'humidité DHT22</li>
-        <li>1 × Pompe à eau 12 V CC</li>
+        <li>1 × Pompe à eau 12 V CC (avec son propre câble d'alimentation 12 V, alimentation secteur séparée)</li>
         <li>2 × Tuyaux (un pour l'entrée d'eau, un pour la sortie vers la plante)</li>
-        <li>1 × Batterie Li-ion 18650 rechargeable (préinstallée dans l'unité)</li>
         <li>1 × Carte de démarrage rapide (avec code QR)</li>
       </ul>
     </div>
@@ -563,7 +563,7 @@
         <li>Pompayı sulanacak alanın yakınına konumlandırın.</li>
         <li>Giriş hortumunun bir ucunu pompanın <strong>emiş ağzına</strong>, diğer ucunu su kaynağına (depo veya tank) yerleştirin.</li>
         <li>Çıkış hortumunun bir ucunu pompanın <strong>çıkış ağzına</strong>, diğer ucunu bitkiye yönlendirin.</li>
-        <li>Ünitenin tümleşik 12 V güç kablosunu şebekeye bağlayın.</li>
+        <li>Pompanın <strong>kendi 12 V güç kablosunu</strong> şebekeye bağlayın. (Bu kablo ESP32 ünitesinden bağımsızdır; ESP32 yalnızca dahili pille çalışır.)</li>
       </ol>
 
       <h3>3.3 Cihazın İlk Açılışı</h3>
@@ -588,7 +588,7 @@
         <li>Position the pump near the irrigation area.</li>
         <li>Connect one end of the intake hose to the pump's <strong>intake port</strong> and place the other end into the water source (reservoir or tank).</li>
         <li>Connect one end of the outlet hose to the pump's <strong>outlet port</strong> and route the other end to the plant.</li>
-        <li>Plug the unit's integrated 12 V power cable into the mains.</li>
+        <li>Plug the pump's <strong>own 12 V power cable</strong> into the mains. (This cable is independent of the ESP32 unit; the ESP32 runs solely on its internal battery.)</li>
       </ol>
 
       <h3>3.3 Initial Power-On</h3>
@@ -613,7 +613,7 @@
         <li>Placez la pompe à proximité de la zone à irriguer.</li>
         <li>Raccordez une extrémité du tuyau d'<strong>aspiration</strong> à l'entrée de la pompe et placez l'autre dans la source d'eau (réservoir ou cuve).</li>
         <li>Raccordez une extrémité du tuyau de <strong>sortie</strong> à la sortie de la pompe et dirigez l'autre vers la plante.</li>
-        <li>Branchez le câble d'alimentation 12 V intégré de l'unité au secteur.</li>
+        <li>Branchez le <strong>câble d'alimentation 12 V propre à la pompe</strong> au secteur. (Ce câble est indépendant de l'unité ESP32 ; l'ESP32 fonctionne uniquement sur sa batterie interne.)</li>
       </ol>
 
       <h3>3.3 Première mise sous tension</h3>
@@ -960,10 +960,10 @@
         <tbody>
           <tr><td>Cihaz "çevrimdışı" olarak görünüyor</td><td>WiFi sinyalini ve pil seviyesini kontrol edin; üniteyi erişim noktasına yaklaştırın.</td></tr>
           <tr><td>Toprak nemi sürekli %0 veya %100</td><td>Sensör kablosunu inceleyin, sensörü uygun derinliğe yerleştirin ve kalibrasyon yapın.</td></tr>
-          <tr><td>Pompa çalışmıyor</td><td>12 V güç kablosunu ve pompa bağlantılarını kontrol edin; su kaynağında yeterli su olduğundan ve emiş hortumunun suya temas ettiğinden emin olun.</td></tr>
+          <tr><td>Pompa çalışmıyor</td><td>Pompanın kendi 12 V güç kablosunun prize takılı olduğunu kontrol edin; su kaynağında yeterli su olduğundan ve emiş hortumunun suya temas ettiğinden emin olun.</td></tr>
           <tr><td>Asistan yanıt vermiyor</td><td>İnternet bağlantınızı doğrulayın ve sayfayı yenileyin.</td></tr>
           <tr><td>Pil hızla tükeniyor</td><td>Otomatik sulama sıklığını azaltın ve uyku süresini panel üzerinden artırın.</td></tr>
-          <tr><td>Cihaz hiç açılmıyor</td><td>Güç anahtarının "ON" konumunda olduğundan emin olun; pilin şarjlı olduğunu doğrulayın, gerekirse 12 V güç kablosunu prize takarak şarj edin.</td></tr>
+          <tr><td>Cihaz hiç açılmıyor</td><td>Güç anahtarının "ON" konumunda olduğundan emin olun; pilin şarjlı olduğunu doğrulayın, gerekirse şarj kablosunu bağlayarak dahili 18650 pili şarj edin.</td></tr>
         </tbody>
       </table>
     </div>
@@ -974,10 +974,10 @@
         <tbody>
           <tr><td>Device shown as "offline"</td><td>Check WiFi signal and battery level; move the unit closer to the access point.</td></tr>
           <tr><td>Soil moisture stuck at 0% or 100%</td><td>Inspect the sensor cable, place the sensor at the correct depth, and recalibrate.</td></tr>
-          <tr><td>Pump does not start</td><td>Check the 12 V power cable and pump connections; ensure the reservoir has sufficient water and the intake hose is submerged.</td></tr>
+          <tr><td>Pump does not start</td><td>Check that the pump's own 12 V power cable is plugged into the mains; ensure the reservoir has sufficient water and the intake hose is submerged.</td></tr>
           <tr><td>Assistant does not respond</td><td>Verify your internet connection and refresh the page.</td></tr>
           <tr><td>Battery drains rapidly</td><td>Reduce automation frequency and increase sleep duration from the dashboard.</td></tr>
-          <tr><td>Device will not power on</td><td>Confirm the power switch is in the "ON" position; verify the battery is charged, and if needed, charge by plugging the 12 V power cable into the mains.</td></tr>
+          <tr><td>Device will not power on</td><td>Confirm the power switch is in the "ON" position; verify the battery is charged, and if needed, connect the charging cable to recharge the internal 18650 battery.</td></tr>
         </tbody>
       </table>
     </div>
@@ -988,10 +988,10 @@
         <tbody>
           <tr><td>L'appareil apparaît « hors ligne »</td><td>Vérifiez le signal WiFi et le niveau de batterie ; rapprochez l'unité du point d'accès.</td></tr>
           <tr><td>Humidité du sol bloquée à 0 % ou 100 %</td><td>Inspectez le câble du capteur, placez-le à la bonne profondeur et recalibrez-le.</td></tr>
-          <tr><td>La pompe ne démarre pas</td><td>Vérifiez le câble d'alimentation 12 V et les raccordements ; assurez-vous que le réservoir contient de l'eau et que le tuyau d'aspiration y est immergé.</td></tr>
+          <tr><td>La pompe ne démarre pas</td><td>Vérifiez que le câble d'alimentation 12 V propre à la pompe est branché au secteur ; assurez-vous que le réservoir contient de l'eau et que le tuyau d'aspiration y est immergé.</td></tr>
           <tr><td>L'assistant ne répond pas</td><td>Vérifiez votre connexion Internet et actualisez la page.</td></tr>
           <tr><td>La batterie se vide rapidement</td><td>Réduisez la fréquence d'automatisation et augmentez la durée de veille via le tableau de bord.</td></tr>
-          <tr><td>L'appareil ne s'allume pas</td><td>Vérifiez que l'interrupteur est en position « ON » ; assurez-vous que la batterie est chargée et, si besoin, rechargez en branchant le câble 12 V au secteur.</td></tr>
+          <tr><td>L'appareil ne s'allume pas</td><td>Vérifiez que l'interrupteur est en position « ON » ; assurez-vous que la batterie est chargée et, si besoin, branchez le câble de charge pour recharger la batterie 18650 interne.</td></tr>
         </tbody>
       </table>
     </div>
@@ -1053,7 +1053,7 @@
       <ul>
         <li>Sensör ünitesini tamamen suya batırmayınız.</li>
         <li>Islak ortamlarda muhafaza kapağının kapalı ve contanın sağlam olduğundan emin olunuz.</li>
-        <li>Yalnızca ürünle birlikte sağlanan tümleşik 12 V güç kablosunu kullanınız.</li>
+        <li>Pompa için yalnızca ürünle birlikte sağlanan 12 V güç kablosunu kullanınız.</li>
         <li>Ünite muhafazasını açmayınız; aksi takdirde garanti geçersiz hale gelir.</li>
         <li>Cihazı doğrudan fıskiye veya basınçlı su akışı altında bırakmayınız.</li>
         <li>Cihazı 0 °C altındaki ya da 50 °C üzerindeki ortam sıcaklıklarında çalıştırmayınız.</li>
@@ -1064,7 +1064,7 @@
       <ul>
         <li>Do not fully submerge the sensor unit in water.</li>
         <li>In wet environments, ensure the enclosure cover is closed and the gasket is intact.</li>
-        <li>Use only the integrated 12 V power cable supplied with the product.</li>
+        <li>Use only the 12 V power cable supplied with the product to power the pump.</li>
         <li>Do not open the unit enclosure; doing so voids the warranty.</li>
         <li>Do not expose the device to direct sprinkler or pressurized water flow.</li>
         <li>Do not operate the device at ambient temperatures below 0 °C or above 50 °C.</li>
@@ -1075,7 +1075,7 @@
       <ul>
         <li>N'immergez pas complètement l'unité de capteurs dans l'eau.</li>
         <li>En environnement humide, vérifiez que le couvercle du boîtier est fermé et que le joint est intact.</li>
-        <li>Utilisez uniquement le câble d'alimentation 12 V intégré fourni avec le produit.</li>
+        <li>Utilisez uniquement le câble d'alimentation 12 V fourni avec le produit pour alimenter la pompe.</li>
         <li>N'ouvrez pas le boîtier de l'unité ; cela annulerait la garantie.</li>
         <li>N'exposez pas l'appareil à un arroseur direct ou à un jet d'eau sous pression.</li>
         <li>N'utilisez pas l'appareil à des températures inférieures à 0 °C ou supérieures à 50 °C.</li>
