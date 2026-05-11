@@ -28,7 +28,15 @@
     text-align: center;
     border-top: 8mm solid #14532d;
   }
-  .logo { font-size: 36px; margin-bottom: 4px; }
+  .logo {
+    width: 28mm;
+    height: 28mm;
+    margin: 0 auto 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo img { width: 100%; height: 100%; object-fit: contain; }
   h1 {
     margin: 0 0 4px;
     font-size: 24px;
@@ -71,7 +79,7 @@
 </head>
 <body>
   <div class="card">
-    <div class="logo">🌱</div>
+    <div class="logo"><img src="logo.png" alt="AgriChat" /></div>
     <h1>AgriChat</h1>
     <div class="tag">Kullanım Kılavuzu</div>
 
