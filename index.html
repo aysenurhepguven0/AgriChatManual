@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AgriChat — Kullanım Kılavuzu</title>
+<style>
+  :root {
+    --green-900: #14532d;
+    --green-700: #15803d;
+    --green-500: #22c55e;
+    --green-100: #dcfce7;
+    --green-50:  #f0fdf4;
+    --gray-900: #111827;
+    --gray-700: #374151;
+    --gray-500: #6b7280;
+    --gray-300: #d1d5db;
+    --gray-100: #f3f4f6;
+    --gray-50:  #f9fafb;
+    --amber-100: #fef3c7;
+    --amber-700: #b45309;
+    --red-100: #fee2e2;
+    --red-700: #b91c1c;
+    --blue-100: #dbeafe;
+    --blue-700: #1d4ed8;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--gray-900);
+    background: var(--gray-50);
+    line-height: 1.6;
+  }
+  .hero {
+    background: linear-gradient(135deg, var(--green-700) 0%, var(--green-900) 100%);
+    color: white;
+    padding: 64px 24px 80px;
+    text-align: center;
+  }
+  .hero .logo {
+    font-size: 56px;
+    margin-bottom: 8px;
+  }
+  .hero h1 {
+    margin: 0 0 8px;
+    font-size: 42px;
+    letter-spacing: -0.02em;
+  }
+  .hero p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 18px;
+  }
+  .hero .meta {
+    margin-top: 24px;
+    font-size: 14px;
+    opacity: 0.75;
+  }
+  .container {
+    max-width: 880px;
+    margin: -40px auto 0;
+    padding: 0 24px 80px;
+  }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(20, 83, 45, 0.08);
+    margin-bottom: 24px;
+  }
+  .toc {
+    background: white;
+    border-radius: 16px;
+    padding: 24px 32px;
+    box-shadow: 0 10px 30px rgba(20, 83, 45, 0.08);
+    margin-bottom: 32px;
+  }
+  .toc h2 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--green-700);
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 20px;
+    columns: 2;
+    column-gap: 32px;
+  }
+  .toc a {
+    color: var(--gray-700);
+    text-decoration: none;
+  }
+  .toc a:hover { color: var(--green-700); text-decoration: underline; }
+  h2.section {
+    color: var(--green-900);
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--green-100);
+  }
+  h3 {
+    color: var(--green-700);
+    margin-top: 28px;
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+  p, li { color: var(--gray-700); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 15px;
+  }
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  th {
+    background: var(--green-50);
+    color: var(--green-900);
+    font-weight: 600;
+  }
+  tr:last-child td { border-bottom: none; }
+  code {
+    background: var(--gray-100);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--green-900);
+  }
+  .callout {
+    border-left: 4px solid;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+  .callout.tip   { background: var(--blue-100);  border-color: var(--blue-700);  color: var(--blue-700); }
+  .callout.warn  { background: var(--amber-100); border-color: var(--amber-700); color: var(--amber-700); }
+  .callout.danger{ background: var(--red-100);   border-color: var(--red-700);   color: var(--red-700); }
+  .callout strong { display: block; margin-bottom: 4px; }
+  .step-list { counter-reset: step; list-style: none; padding: 0; }
+  .step-list li {
+    counter-increment: step;
+    padding: 12px 12px 12px 56px;
+    position: relative;
+    background: var(--gray-50);
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  .step-list li::before {
+    content: counter(step);
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    width: 28px;
+    height: 28px;
+    background: var(--green-700);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .grid .item {
+    background: var(--green-50);
+    border-radius: 10px;
+    padding: 14px;
+    border: 1px solid var(--green-100);
+  }
+  .grid .item .icon { font-size: 24px; margin-bottom: 4px; }
+  .grid .item strong { color: var(--green-900); display: block; }
+  .grid .item span { color: var(--gray-700); font-size: 14px; }
+  footer {
+    text-align: center;
+    color: var(--gray-500);
+    padding: 32px 16px;
+    font-size: 14px;
+  }
+  footer a { color: var(--green-700); text-decoration: none; }
+  .badge {
+    display: inline-block;
+    background: var(--green-100);
+    color: var(--green-900);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 30px; }
+    .container { padding: 0 16px 40px; }
+    .card { padding: 20px; }
+    .toc ol { columns: 1; }
+  }
+  @media print {
+    body { background: white; }
+    .hero { background: var(--green-900) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .card, .toc { box-shadow: none; border: 1px solid var(--gray-100); }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="logo">🌱</div>
+  <h1>AgriChat</h1>
+  <p>Doğal dil ile sulama kontrolü — Kullanım Kılavuzu</p>
+  <div class="meta">Sürüm 1.0 · 2026</div>
+</header>
+
+<main class="container">
+
+  <nav class="toc">
+    <h2>İçindekiler</h2>
+    <ol>
+      <li><a href="#giris">AgriChat Nedir?</a></li>
+      <li><a href="#kutu">Kutu İçeriği</a></li>
+      <li><a href="#donanim">Donanım Kurulumu</a></li>
+      <li><a href="#wifi">WiFi Bağlantısı</a></li>
+      <li><a href="#dashboard">Web Paneli</a></li>
+      <li><a href="#chat">Chatbot ile Konuşma</a></li>
+      <li><a href="#kurallar">Otomasyon Kuralları</a></li>
+      <li><a href="#manuel">Manuel Pompa Kontrolü</a></li>
+      <li><a href="#sorun">Sorun Giderme</a></li>
+      <li><a href="#reset">Fabrika Ayarları</a></li>
+      <li><a href="#guvenlik">Güvenlik</a></li>
+    </ol>
+  </nav>
+
+  <section id="giris" class="card">
+    <h2 class="section">1. AgriChat Nedir?</h2>
+    <p><strong>AgriChat</strong>, çiftçilerin sulama sistemini menü gezerek değil, <em>doğal dilde yazarak</em> kontrol etmesini sağlayan bir IoT tarım otomasyon sistemidir.</p>
+    <p>Tarladaki ESP32 sensör ünitesi toprak nemi, sıcaklık ve nemi ölçer; verileri MQTT üzerinden buluta gönderir. Yapay zekâ destekli sohbet asistanı ("Tarlamı 10 dakika sula" gibi) komutları anlayarak su pompasını çalıştırır.</p>
+    <div class="grid">
+      <div class="item"><div class="icon">💧</div><strong>Akıllı Sulama</strong><span>Toprak nemine göre otomatik</span></div>
+      <div class="item"><div class="icon">💬</div><strong>Sohbet Arayüzü</strong><span>Türkçe doğal dil komutları</span></div>
+      <div class="item"><div class="icon">🔋</div><strong>14 Gün Pil Ömrü</strong><span>Deep sleep ile düşük tüketim</span></div>
+      <div class="item"><div class="icon">🔒</div><strong>TLS Şifreli</strong><span>Güvenli MQTT iletişimi</span></div>
+    </div>
+  </section>
+
+  <section id="kutu" class="card">
+    <h2 class="section">2. Kutu İçeriği</h2>
+    <ul>
+      <li>1 × ESP32 sensör ünitesi (kapalı muhafaza içinde, monte edilmiş)</li>
+      <li>1 × Toprak nem sensörü (kablolu)</li>
+      <li>1 × DHT22 sıcaklık + nem sensörü</li>
+      <li>1 × 12V su pompası + 2 m hortum</li>
+      <li>1 × 12V güç adaptörü (pompa için)</li>
+      <li>1 × 18650 Li-ion pil (ünite içinde takılı)</li>
+      <li>1 × Hızlı başlangıç kartı (QR kodu üzerinde)</li>
+    </ul>
+  </section>
+
+  <section id="donanim" class="card">
+    <h2 class="section">3. Donanım Kurulumu</h2>
+
+    <h3>3.1 Sensör Ünitesinin Yerleştirilmesi</h3>
+    <ul>
+      <li>Üniteyi gölgede, yağmurdan korunaklı bir yere yerleştirin (örn. küçük bir saçak altı).</li>
+      <li>WiFi sinyalinin yeterli olduğundan emin olun (router'dan ≤ 30 m).</li>
+      <li>Toprak nem sensörünü, sulanacak alanın kökleri yakınına 5–7 cm derine gömün.</li>
+    </ul>
+
+    <h3>3.2 Su Pompasının Bağlanması</h3>
+    <ol class="step-list">
+      <li>Pompayı su deposuna/varile yerleştirin.</li>
+      <li>Hortumu pompa çıkışına takın ve sulanacak alana uzatın.</li>
+      <li>12V adaptörü önce pompaya, sonra prize takın.</li>
+    </ol>
+
+    <h3>3.3 Cihazın Açılması</h3>
+    <p>Sensör ünitesinin yan tarafındaki güç düğmesini açın. LED <strong>mavi yanıp sönmeye</strong> başlarsa, cihaz WiFi kurulum moduna girmiş demektir.</p>
+
+    <div class="callout warn">
+      <strong>⚠ Önemli</strong>
+      Üniteyi suyun içine sokmayın. Muhafazanın contası kapalı ve kuru kalmalıdır.
+    </div>
+  </section>
+
+  <section id="wifi" class="card">
+    <h2 class="section">4. WiFi Bağlantısı (İlk Kurulum)</h2>
+
+    <h3>4.1 Kurulum Ağına Bağlanma</h3>
+    <ol class="step-list">
+      <li>Telefon veya tabletinizde WiFi ayarlarını açın.</li>
+      <li>Listede <code>AgriChat_Setup_XXXX</code> adlı ağa bağlanın.</li>
+      <li>Bağlanır bağlanmaz kurulum sayfası otomatik olarak açılır (açılmazsa tarayıcıdan <code>192.168.4.1</code> adresine gidin).</li>
+    </ol>
+
+    <h3>4.2 WiFi Bilgilerinizi Girin</h3>
+    <ol class="step-list">
+      <li>Açılan sayfada ev/tarla WiFi ağınızı seçin.</li>
+      <li>WiFi şifresini girin.</li>
+      <li><strong>Kaydet</strong> butonuna basın.</li>
+      <li>Cihaz yeniden başlar (yaklaşık 10 sn).</li>
+    </ol>
+
+    <h3>4.3 Bağlantıyı Doğrulama</h3>
+    <p>LED <strong>yeşil sabit</strong> yanıyorsa, cihaz başarıyla bağlanmış demektir. Web paneline girip "online" ibaresini gördüğünüzde kurulum tamamdır.</p>
+  </section>
+
+  <section id="dashboard" class="card">
+    <h2 class="section">5. Web Paneli (Dashboard)</h2>
+
+    <h3>5.1 Panele Erişim</h3>
+    <p>Tarayıcınızdan <code>https://agrichat.app</code> adresine gidin ve hesabınızla giriş yapın. Chrome, Edge, Safari veya Firefox'un güncel sürümleri desteklenir.</p>
+
+    <h3>5.2 Sensör Değerlerini Anlama</h3>
+    <table>
+      <thead><tr><th>Ölçüm</th><th>Anlamı</th><th>İdeal Aralık</th></tr></thead>
+      <tbody>
+        <tr><td>Toprak Nemi</td><td>Toprağın su oranı</td><td>%30 – %60</td></tr>
+        <tr><td>Sıcaklık</td><td>Ortam hava sıcaklığı</td><td>15 – 30 °C</td></tr>
+        <tr><td>Nem</td><td>Havadaki bağıl nem</td><td>%40 – %70</td></tr>
+        <tr><td>Pil</td><td>Ünite pil seviyesi</td><td>>%20</td></tr>
+      </tbody>
+    </table>
+
+    <h3>5.3 Geçmiş Verileri Görüntüleme</h3>
+    <p>Panelde <em>Grafikler</em> sekmesinden son 14 günün eğilimlerini inceleyebilirsiniz. Tarih aralığını üst menüden değiştirin.</p>
+  </section>
+
+  <section id="chat" class="card">
+    <h2 class="section">6. Chatbot ile Konuşma</h2>
+
+    <h3>6.1 Komut Vermek</h3>
+    <p>Sohbet kutusuna doğal Türkçe yazın. Aşağıda örnekler:</p>
+    <table>
+      <thead><tr><th>Ne istiyorsanız</th><th>Ne yazacaksınız</th></tr></thead>
+      <tbody>
+        <tr><td>Tarlayı hemen sulamak</td><td>"Tarlamı 10 dakika sula"</td></tr>
+        <tr><td>Otomatik sulama kurmak</td><td>"Nem %30'un altına düşerse sula"</td></tr>
+        <tr><td>Anlık durumu öğrenmek</td><td>"Tarlamın durumu nasıl?"</td></tr>
+        <tr><td>Otomatik kuralı kapatmak</td><td>"Otomatik sulama kuralını durdur"</td></tr>
+        <tr><td>Eşiği değiştirmek</td><td>"Sulama eşiğini %25'e indir"</td></tr>
+      </tbody>
+    </table>
+
+    <h3>6.2 Yapay Zekâ Cevaplarını Okumak</h3>
+    <p>AgriChat her komuttan sonra <strong>ne yaptığını özetler</strong> ve <strong>onay sorar</strong>. Örnek:</p>
+    <div class="callout tip">
+      <strong>AgriChat</strong>
+      "10 dakikalık sulama başlatıyorum. Pompa 14:32'de duracak. Onaylıyor musunuz? <em>(Evet / Hayır)</em>"
+    </div>
+  </section>
+
+  <section id="kurallar" class="card">
+    <h2 class="section">7. Otomasyon Kuralları</h2>
+
+    <h3>7.1 Aktif Kuralları Görmek</h3>
+    <p>Panelde <em>Kurallar</em> sekmesinde tüm aktif kurallar listelenir. Her kuralın yanında durum göstergesi (yeşil = aktif, gri = pasif) bulunur.</p>
+
+    <h3>7.2 Kuralı Geçici Durdurma</h3>
+    <p>Bir kuralı silmeden duraklatmak için yanındaki anahtarı kapatın. Anahtarı tekrar açtığınızda kural kaldığı yerden devam eder.</p>
+
+    <h3>7.3 Kural Silme</h3>
+    <p>Kuralın sağındaki çöp kutusu simgesine basın ve onaylayın. <strong>Silinen kural geri getirilemez.</strong></p>
+  </section>
+
+  <section id="manuel" class="card">
+    <h2 class="section">8. Manuel Pompa Kontrolü</h2>
+
+    <h3>8.1 Pompayı Açma</h3>
+    <ol class="step-list">
+      <li>Panelde <em>Manuel Kontrol</em> butonuna basın.</li>
+      <li>Süreyi seçin (1 – 30 dakika).</li>
+      <li><strong>Başlat</strong> butonuna basın ve onay penceresinde "Evet" deyin.</li>
+    </ol>
+
+    <h3>8.2 Pompayı Kapatma</h3>
+    <p>Çalışan pompayı erken durdurmak için aynı sayfadaki <strong>Durdur</strong> butonuna basın. Komut anında ESP32'ye iletilir.</p>
+
+    <div class="callout warn">
+      <strong>⚠ Güvenlik</strong>
+      Sistem, pompayı en fazla 30 dakika çalıştırır — internet bağlantısı kopsa bile pompa otomatik durur (watchdog koruması).
+    </div>
+  </section>
+
+  <section id="sorun" class="card">
+    <h2 class="section">9. Sorun Giderme</h2>
+    <table>
+      <thead><tr><th>Sorun</th><th>Çözüm</th></tr></thead>
+      <tbody>
+        <tr><td>Cihaz "offline" görünüyor</td><td>WiFi'yi kontrol edin, pil seviyesine bakın, üniteyi router'a yaklaştırın.</td></tr>
+        <tr><td>Nem her zaman %0 veya %100</td><td>Sensör kablosunu kontrol edin, toprağa daha derin gömün, yeniden kalibre edin.</td></tr>
+        <tr><td>Pompa çalışmıyor</td><td>12V adaptörü ve pompa bağlantılarını kontrol edin, su deposunda su olduğundan emin olun.</td></tr>
+        <tr><td>Chatbot yanıt vermiyor</td><td>İnternet bağlantınızı kontrol edin, sayfayı yenileyin.</td></tr>
+        <tr><td>Pil çok çabuk bitiyor</td><td>Otomatik sulama sıklığını azaltın, uyku süresini panelden artırın.</td></tr>
+        <tr><td>LED kırmızı yanıyor</td><td>Cihaz hatası — fabrika ayarlarına dönün (bkz. Bölüm 10).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="reset" class="card">
+    <h2 class="section">10. Fabrika Ayarlarına Dönüş</h2>
+    <ol class="step-list">
+      <li>Sensör ünitesinin üzerindeki <strong>RESET</strong> tuşunu 10 saniye basılı tutun.</li>
+      <li>LED hızlı yanıp sönmeye başlar — tuşu bırakın.</li>
+      <li>Cihaz yeniden başlar ve kurulum moduna girer.</li>
+      <li>Bölüm 4'teki adımlarla WiFi'yi tekrar yapılandırın.</li>
+    </ol>
+    <div class="callout danger">
+      <strong>❗ Dikkat</strong>
+      Fabrika ayarına dönmek tüm kuralları ve geçmiş verileri siler.
+    </div>
+  </section>
+
+  <section id="guvenlik" class="card">
+    <h2 class="section">11. Güvenlik Bilgileri</h2>
+    <ul>
+      <li>Sensör ünitesini suya batırmayın.</li>
+      <li>Islak ortamlarda muhafaza kapağının kapalı olduğundan emin olun.</li>
+      <li>Pompa için yalnızca ürünle gelen 12V adaptörü kullanın.</li>
+      <li>Üniteyi açıp içindeki elektronik kartlara dokunmayın — garanti geçersiz olur.</li>
+      <li>Direkt fıskiye/sprey altında bırakmayın.</li>
+      <li>0 °C altında veya 50 °C üstünde çalıştırmayın.</li>
+    </ul>
+  </section>
+
+  <section class="card" style="text-align:center;">
+    <span class="badge">Destek</span>
+    <span class="badge">İletişim</span>
+    <h3 style="margin-top:12px;">Yardıma mı ihtiyacınız var?</h3>
+    <p>E-posta: <a href="mailto:destek@agrichat.app">destek@agrichat.app</a><br/>
+    GitHub: <a href="https://github.com/AgriChat">github.com/AgriChat</a></p>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 AgriChat Ekibi · Hepguven · Karadag · Colakoglu · Pilaz · Sarac · Akbas<br/>
+  Bu kılavuz QR kod ile dağıtılmaktadır.
+</footer>
+
+</body>
+</html>
