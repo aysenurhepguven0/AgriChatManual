@@ -3,7 +3,7 @@ AgriChat Kullanim Kilavuzu - QR Kod Uretici
 
 Kullanim:
     python generate_qr.py <URL>
-    python generate_qr.py https://kullaniciadi.github.io/AgriChat/manual/
+    python generate_qr.py https://aysenurhepguven0.github.io/AgriChatManual
 
 Bu script verilen URL'i iceren bir QR kod PNG dosyasi uretir (qr.png).
 QR okutuldugunda telefonun tarayicisi bu URL'i acar.

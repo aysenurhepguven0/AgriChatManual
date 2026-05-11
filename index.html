@@ -70,41 +70,42 @@
   .hero {
     background: linear-gradient(135deg, var(--green-700) 0%, var(--green-900) 100%);
     color: white;
-    padding: 56px 24px 80px;
+    padding: 72px 24px 96px;
     text-align: center;
   }
   .hero .logo {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 16px;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 24px;
     background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    padding: 14px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    padding: 22px;
   }
   .hero .logo img { width: 100%; height: 100%; object-fit: contain; }
   .hero h1 {
-    margin: 0 0 10px;
-    font-size: 44px;
-    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    font-size: 48px;
+    letter-spacing: -0.025em;
     font-weight: 700;
   }
   .hero .subtitle {
-    margin: 0;
-    opacity: 0.92;
-    font-size: 18px;
-    font-weight: 300;
-    max-width: 600px;
     margin: 0 auto;
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    max-width: 640px;
+    letter-spacing: -0.005em;
   }
   .hero .meta {
-    margin-top: 28px;
-    font-size: 13px;
-    opacity: 0.7;
-    letter-spacing: 0.05em;
+    margin-top: 36px;
+    font-size: 12px;
+    opacity: 0.65;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 
   .container {
@@ -148,21 +149,22 @@
   .toc a:hover { color: var(--green-700); text-decoration: underline; }
 
   h2.section {
-    color: var(--green-900);
-    font-size: 26px;
+    color: var(--gray-900);
+    font-size: 28px;
     margin-top: 0;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--green-100);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-100);
     font-weight: 700;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   h3 {
-    color: var(--green-700);
-    margin-top: 28px;
-    margin-bottom: 8px;
-    font-size: 17px;
+    color: var(--gray-900);
+    margin-top: 32px;
+    margin-bottom: 10px;
+    font-size: 16px;
     font-weight: 600;
+    letter-spacing: -0.005em;
   }
   p, li { color: var(--gray-700); }
   p { margin: 12px 0; }
@@ -197,16 +199,25 @@
   }
 
   .callout {
-    border-left: 4px solid;
-    padding: 16px 20px;
-    border-radius: 8px;
-    margin: 18px 0;
-    font-size: 15px;
+    border-left: 3px solid;
+    padding: 14px 20px;
+    margin: 20px 0;
+    font-size: 14.5px;
+    background: var(--gray-50);
+    color: var(--gray-700);
   }
-  .callout.tip   { background: var(--blue-100);  border-color: var(--blue-700);  color: var(--blue-700); }
-  .callout.warn  { background: var(--amber-100); border-color: var(--amber-700); color: var(--amber-700); }
-  .callout.danger{ background: var(--red-100);   border-color: var(--red-700);   color: var(--red-700); }
-  .callout strong { display: block; margin-bottom: 6px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .callout.tip    { border-color: var(--blue-700);  }
+  .callout.warn   { border-color: var(--amber-700); }
+  .callout.danger { border-color: var(--red-700);   }
+  .callout strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gray-900);
+    font-weight: 700;
+  }
 
   .step-list { counter-reset: step; list-style: none; padding: 0; margin: 16px 0; }
   .step-list li {
@@ -236,19 +247,51 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-    margin: 20px 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin: 24px 0;
+    background: var(--gray-100);
+    border: 1px solid var(--gray-100);
+  }
+  @media (min-width: 760px) {
+    .grid { grid-template-columns: repeat(4, 1fr); }
   }
   .grid .item {
-    background: var(--green-50);
-    border-radius: 10px;
-    padding: 16px;
-    border: 1px solid var(--green-100);
+    background: white;
+    padding: 22px 18px;
   }
-  .grid .item .icon { font-size: 26px; margin-bottom: 6px; }
-  .grid .item strong { color: var(--green-900); display: block; margin-bottom: 4px; }
-  .grid .item span { color: var(--gray-700); font-size: 14px; }
+  .grid .item .icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 14px;
+    color: var(--green-700);
+  }
+  .grid .item .icon svg { width: 100%; height: 100%; }
+  .grid .item strong {
+    color: var(--gray-900);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .grid .item span { color: var(--gray-500); font-size: 13px; line-height: 1.5; }
+
+  /* Storyboard illustrations */
+  .story {
+    background: var(--green-50);
+    border-radius: 12px;
+    padding: 32px 24px;
+    margin: 20px 0 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .story svg {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    color: var(--green-700);
+  }
 
   footer {
     text-align: center;
@@ -354,7 +397,12 @@
 
     <div class="grid">
       <div class="item">
-        <div class="icon">💧</div>
+        <div class="icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 6c-7 9-13 16-13 24a13 13 0 0 0 26 0c0-8-6-15-13-24z"/>
+            <path d="M30 30a6 6 0 0 1-6 6"/>
+          </svg>
+        </div>
         <strong data-lang="tr">Akıllı Sulama</strong>
         <strong data-lang="en">Smart Irrigation</strong>
         <strong data-lang="fr">Irrigation intelligente</strong>
@@ -363,7 +411,13 @@
         <span data-lang="fr">Décision selon l'humidité du sol</span>
       </div>
       <div class="item">
-        <div class="icon">💬</div>
+        <div class="icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 14a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H20l-8 6V14z"/>
+            <line x1="16" y1="20" x2="32" y2="20"/>
+            <line x1="16" y1="26" x2="26" y2="26"/>
+          </svg>
+        </div>
         <strong data-lang="tr">Sohbet Arayüzü</strong>
         <strong data-lang="en">Conversational Interface</strong>
         <strong data-lang="fr">Interface conversationnelle</strong>
@@ -372,7 +426,15 @@
         <span data-lang="fr">Traitement du langage naturel</span>
       </div>
       <div class="item">
-        <div class="icon">🔋</div>
+        <div class="icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="16" width="32" height="18" rx="2"/>
+            <rect x="40" y="22" width="3" height="6" rx="1"/>
+            <line x1="12" y1="22" x2="12" y2="28"/>
+            <line x1="18" y1="22" x2="18" y2="28"/>
+            <line x1="24" y1="22" x2="24" y2="28"/>
+          </svg>
+        </div>
         <strong data-lang="tr">14 Gün Pil Ömrü</strong>
         <strong data-lang="en">14-Day Battery Life</strong>
         <strong data-lang="fr">Autonomie de 14 jours</strong>
@@ -381,7 +443,12 @@
         <span data-lang="fr">Mode veille profonde à faible consommation</span>
       </div>
       <div class="item">
-        <div class="icon">🔒</div>
+        <div class="icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 6L10 12v12c0 9 6 16 14 18 8-2 14-9 14-18V12L24 6z"/>
+            <path d="M19 24l4 4 8-8"/>
+          </svg>
+        </div>
         <strong data-lang="tr">Uçtan Uca Şifreleme</strong>
         <strong data-lang="en">End-to-End Encryption</strong>
         <strong data-lang="fr">Chiffrement de bout en bout</strong>
@@ -441,6 +508,39 @@
     <h2 class="section" data-lang="tr">3. Donanım Kurulumu</h2>
     <h2 class="section" data-lang="en">3. Hardware Setup</h2>
     <h2 class="section" data-lang="fr">3. Installation matérielle</h2>
+
+    <div class="story" aria-hidden="true">
+      <svg viewBox="0 0 480 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Ground line -->
+        <line x1="20" y1="140" x2="460" y2="140"/>
+        <line x1="20" y1="146" x2="460" y2="146" stroke-dasharray="3 4" opacity="0.4"/>
+        <!-- Sensor unit (left) -->
+        <rect x="60" y="70" width="70" height="60" rx="4"/>
+        <circle cx="95" cy="92" r="3"/>
+        <line x1="78" y1="110" x2="112" y2="110"/>
+        <line x1="78" y1="118" x2="100" y2="118"/>
+        <!-- WiFi waves above sensor -->
+        <path d="M85 55c5-5 15-5 20 0M80 48c8-8 22-8 30 0M75 41c12-12 28-12 40 0"/>
+        <!-- Cable into soil -->
+        <path d="M95 130 Q95 155 130 165"/>
+        <!-- Soil probe (right of unit) -->
+        <line x1="130" y1="165" x2="130" y2="155"/>
+        <rect x="126" y="155" width="8" height="3"/>
+        <!-- Plant (center) -->
+        <line x1="240" y1="140" x2="240" y2="100"/>
+        <path d="M240 120c-15 0-22-8-22-18 12 0 22 8 22 18z"/>
+        <path d="M240 110c15 0 22-8 22-18-12 0-22 8-22 18z"/>
+        <!-- Water pump (right) -->
+        <rect x="370" y="90" width="60" height="40" rx="3"/>
+        <circle cx="400" cy="110" r="8"/>
+        <line x1="396" y1="106" x2="404" y2="114"/>
+        <!-- Hose curve to plant -->
+        <path d="M370 110 Q300 110 260 130"/>
+        <!-- Water drops -->
+        <circle cx="245" cy="135" r="1.5" fill="currentColor"/>
+        <circle cx="255" cy="138" r="1.5" fill="currentColor"/>
+      </svg>
+    </div>
 
     <div data-lang="tr">
       <h3>3.1 Sensör Ünitesinin Konumlandırılması</h3>
@@ -520,6 +620,30 @@
     <h2 class="section" data-lang="tr">4. Ağ Yapılandırması</h2>
     <h2 class="section" data-lang="en">4. Network Configuration</h2>
     <h2 class="section" data-lang="fr">4. Configuration réseau</h2>
+
+    <div class="story" aria-hidden="true">
+      <svg viewBox="0 0 480 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Phone -->
+        <rect x="60" y="30" width="90" height="140" rx="10"/>
+        <line x1="90" y1="160" x2="120" y2="160"/>
+        <line x1="75" y1="50" x2="135" y2="50"/>
+        <!-- Phone screen content: WiFi list -->
+        <line x1="75" y1="65" x2="115" y2="65"/>
+        <rect x="75" y="75" width="60" height="14" rx="2"/>
+        <rect x="75" y="93" width="60" height="14" rx="2" stroke-dasharray="2 2"/>
+        <text x="80" y="86" font-size="6" fill="currentColor" stroke="none">AgriChat_Setup</text>
+        <!-- WiFi waves between phone and unit -->
+        <path d="M180 100c8-8 22-8 30 0M170 90c14-14 34-14 48 0M160 80c20-20 44-20 64 0"/>
+        <!-- Sensor unit on right -->
+        <rect x="340" y="60" width="80" height="80" rx="5"/>
+        <circle cx="380" cy="90" r="4"/>
+        <line x1="355" y1="115" x2="405" y2="115"/>
+        <line x1="355" y1="125" x2="395" y2="125"/>
+        <!-- Antenna -->
+        <line x1="380" y1="60" x2="380" y2="40"/>
+        <circle cx="380" cy="38" r="3" fill="currentColor"/>
+      </svg>
+    </div>
 
     <div data-lang="tr">
       <h3>4.1 Kurulum Ağına Bağlanma</h3>
@@ -651,6 +775,22 @@
     <h2 class="section" data-lang="tr">6. Sohbet Asistanı</h2>
     <h2 class="section" data-lang="en">6. Chat Assistant</h2>
     <h2 class="section" data-lang="fr">6. Assistant conversationnel</h2>
+
+    <div class="story" aria-hidden="true">
+      <svg viewBox="0 0 480 180" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <!-- User bubble (left) -->
+        <path d="M40 50h180a8 8 0 0 1 8 8v32a8 8 0 0 1-8 8H70l-18 14v-14H40a8 8 0 0 1-8-8V58a8 8 0 0 1 8-8z"/>
+        <line x1="50" y1="70" x2="200" y2="70"/>
+        <line x1="50" y1="82" x2="170" y2="82"/>
+        <!-- AI response bubble (right) -->
+        <path d="M260 100h180a8 8 0 0 1 8 8v32a8 8 0 0 1-8 8H410l-18 14v-14H260a8 8 0 0 1-8-8v-32a8 8 0 0 1 8-8z"/>
+        <line x1="270" y1="120" x2="420" y2="120"/>
+        <line x1="270" y1="132" x2="390" y2="132"/>
+        <!-- Leaf icon next to AI bubble (left of it) -->
+        <circle cx="240" cy="124" r="14"/>
+        <path d="M236 130c2-4 4-8 8-10-1 5-4 9-8 10z"/>
+      </svg>
+    </div>
 
     <div data-lang="tr">
       <h3>6.1 Komut Verme</h3>
@@ -979,8 +1119,7 @@
       <span data-lang="tr">E-posta:</span>
       <span data-lang="en">Email:</span>
       <span data-lang="fr">Courriel :</span>
-      <a href="mailto:destek@agrichat.app">destek@agrichat.app</a><br/>
-      GitHub: <a href="https://github.com/aysenurhepguven0/AgriChatManual">github.com/aysenurhepguven0/AgriChatManual</a>
+      <a href="mailto:destek@agrichat.app">destek@agrichat.app</a>
     </p>
   </section>
 
