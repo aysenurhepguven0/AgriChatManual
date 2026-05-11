@@ -42,7 +42,7 @@ def make_qr(url: str, output_path: Path) -> None:
 
 def main() -> None:
     if len(sys.argv) < 2:
-        url = "https://example.github.io/AgriChat/manual/"
+        url = "https://aysenurhepguven0.github.io/AgriChatManual"
         print("Uyari: URL verilmedi, placeholder kullaniliyor.")
         print(f"Dogru kullanim: python {Path(__file__).name} <URL>")
     else:
